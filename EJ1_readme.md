@@ -65,15 +65,15 @@ Lo mismo que e el 32, busque la id e hice un reset hard
 
 ### 1) Crear un repositorio en GitHub y clónalo en tu equipo
 
-<pre>
-<span style="color:#74C2FF">@Iv3 Ejercicios % </span>  git clone git@github.com:Iv3tt3/Practica_GIT.git
+```
+@Iv3 Ejercicios %  git clone git@github.com:Iv3tt3/Practica_GIT.git
 Cloning into 'Practica_GIT'...
 warning: You appear to have cloned an empty repository.
-<span style="color:#74C2FF">@Iv3 Ejercicios % </span> % cd Practica_GIT
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> % ls -a
+@Iv3 Ejercicios % cd Practica_GIT
+@Iv3 Practica_GIT % % ls -a
 .	..	.git
 
-</pre>
+```
 
 ### 2) Crear un archivo git-nuestro.md con el contenido:
 
@@ -99,9 +99,9 @@ y líbranos de SVN
 
 git commit --amend
 
-<pre>
+```
 
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span>  git status
+@Iv3 Practica_GIT %  git status
 On branch main
 
 No commits yet
@@ -112,13 +112,13 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 
-</pre>
+```
 
 ### 3) Añadir git-nuestro.md al staging area
 
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git add git-nuestro.md
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git status
+```
+@Iv3 Practica_GIT % git add git-nuestro.md
+@Iv3 Practica_GIT % git status
 On branch main
 
 No commits yet
@@ -127,55 +127,55 @@ Changes to be committed:
   (use "git rm --cached <file>..." to unstage)
 	new file:   git-nuestro.md
 
-</pre>
+```
 
 ### 4) Mover lo que hay en el staging area al repositorio
 
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git commit -m "Initial commit git-nuestro.md"
+```
+@Iv3 Practica_GIT % git commit -m "Initial commit git-nuestro.md"
 [main (root-commit) 8a0dfe1] Initial commit git-nuestro.md
  1 file changed, 21 insertions(+)
  create mode 100644 git-nuestro.md
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git status
+@Iv3 Practica_GIT % git status
 On branch main
 Your branch is based on 'origin/main', but the upstream is gone.
   (use "git branch --unset-upstream" to fixup)
 
 nothing to commit, working tree clean
 
-</pre>
+```
 
 ### 5) Crear una rama llamada “styled”
 
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git branch styled
-</pre>
+```
+@Iv3 Practica_GIT % git branch styled
+```
 
 ### 6) Listar las ramas que hay en el repositorio
 
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git branch
+```
+@Iv3 Practica_GIT % git branch
 * main
   styled
-</pre>
+```
 
 ### 7) Moverse a la rama “styled”
 
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git checkout styled
+```
+@Iv3 Practica_GIT % git checkout styled
 Switched to branch 'styled'
-</pre>
+```
 
 ### 8) Comprobar que se está en la rama correcta
 
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git log
+```
+@Iv3 Practica_GIT % git log
 commit 8a0dfe1c5205c42b41a66e535a535f20ca13c7ef (HEAD -> styled, main)
 Author: Iv3tt3 <reach.iv3tt3@gmail.com>
 Date:   Sun Dec 3 19:35:25 2023 +0000
 
     Initial commit git-nuestro.md
-</pre>
+```
 
 ### 9) Modificar en el archivo git-nuestro.md:
 
@@ -197,8 +197,8 @@ No nos dejes caer en *detached HEAD*
 
 y líbranos de *SVN*
 
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git status
+```
+@Iv3 Practica_GIT % git status
 On branch styled
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
@@ -206,82 +206,82 @@ Changes not staged for commit:
 	modified:   git-nuestro.md
 
 no changes added to commit (use "git add" and/or "git commit -a")
-</pre>
+```
 
 ### 10) Añadir los cambios al staging area y luego pasarlos al repositorio
 
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git add *md
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git status
+```
+@Iv3 Practica_GIT % git add *md
+@Iv3 Practica_GIT % git status
 On branch styled
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
 	modified:   git-nuestro.md
 
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git commit -m "gitnnuestro.md modified styled"
+@Iv3 Practica_GIT % git commit -m "gitnnuestro.md modified styled"
 [styled 7954067] gitnnuestro.md modified styled
-</pre>
+```
 
 
 ### 11) Deshacer el último commit (perdiendo los cambios realizados en el working copy)
 
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git reset --hard HEAD~1
+```
+@Iv3 Practica_GIT % git reset --hard HEAD~1
 HEAD is now at d9fadac Initial commit git-nuestro.md
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git log
+@Iv3 Practica_GIT % git log
 commit d9fadacc6bde9dee7653a33d38c66f7cb9d0e9cf (HEAD -> styled, main)
 Author: Iv3tt3 <reach.iv3tt3@gmail.com>
 Date:   Sun Dec 3 19:55:05 2023 +0000
 
     Initial commit git-nuestro.md
-</pre>
+```
 
 ### 12) Rehacer el último commit (el que acabamos de deshacer)
 
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git reflog
+```
+@Iv3 Practica_GIT % git reflog
 d9fadac (HEAD -> styled, main) HEAD@{0}: reset: moving to HEAD~1
 02702cd HEAD@{1}: commit: gitnnuestro.md modified styled
 d9fadac (HEAD -> styled, main) HEAD@{2}: checkout: moving from main to styled
 d9fadac (HEAD -> styled, main) HEAD@{3}: commit (initial): Initial commit git-nuestro.md
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git reset --hard 02702cd
+@Iv3 Practica_GIT % git reset --hard 02702cd
 HEAD is now at 02702cd gitnnuestro.md modified styled
-</pre>
+```
 
 ### 13) Hacer un merge con ‘main’ (styled absorbe a main)
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git merge main
+```
+@Iv3 Practica_GIT % git merge main
 Already up to date.
-</pre>
+```
 
 ### 14) Volver a la rama main
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git checkout main
+```
+@Iv3 Practica_GIT % git checkout main
 Switched to branch 'main'
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git log
+@Iv3 Practica_GIT % git log
 commit d9fadacc6bde9dee7653a33d38c66f7cb9d0e9cf (HEAD -> main)
 Author: Iv3tt3 <reach.iv3tt3@gmail.com>
 Date:   Sun Dec 3 19:55:05 2023 +0000
 
     Initial commit git-nuestro.md
-</pre>
+```
 
 ### 15) Crear una nueva rama llamada “htmlify”
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git branch htmlify
-</pre>
+```
+@Iv3 Practica_GIT % git branch htmlify
+```
 
 ### 16) Cambiar a la rama htmlify
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git checkout htmlify
+```
+@Iv3 Practica_GIT % git checkout htmlify
 Switched to branch 'htmlify'
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git log
+@Iv3 Practica_GIT % git log
 commit d9fadacc6bde9dee7653a33d38c66f7cb9d0e9cf (HEAD -> htmlify, main)
 Author: Iv3tt3 <reach.iv3tt3@gmail.com>
 Date:   Sun Dec 3 19:55:05 2023 +0000
 
     Initial commit git-nuestro.md
-</pre>
+```
 
 ### 17) Modificar en el archivo git-nuestro.md:
 <p><em>Git</em> nuestro que estas en los repos<br /> 
@@ -304,8 +304,8 @@ y líbranos de <em>SVN</em><br />
 
 <code>git commit --amend</code></p>
 
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git status
+```
+@Iv3 Practica_GIT % git status
 On branch htmlify
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
@@ -314,36 +314,36 @@ Changes not staged for commit:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 
-</pre>
+```
 
 ### 18) Hacer un commit
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git add *md
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git status
+```
+@Iv3 Practica_GIT % git add *md
+@Iv3 Practica_GIT % git status
 On branch htmlify
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
 	modified:   git-nuestro.md
 
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git commit -m "gitnuestro.md modified htmlify"
+@Iv3 Practica_GIT % git commit -m "gitnuestro.md modified htmlify"
 [htmlify 3859a3d] gitnuestro.md modified htmlify
  1 file changed, 10 insertions(+), 12 deletions(-)
-</pre>
+```
 
 ### 19) Hacer un merge de “htmlify” en “styled” (styled absorbe a htmlify)
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git checkout styled
+```
+@Iv3 Practica_GIT % git checkout styled
 Switched to branch 'styled'
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git merge htmlify
+@Iv3 Practica_GIT % git merge htmlify
 Auto-merging git-nuestro.md
 CONFLICT (content): Merge conflict in git-nuestro.md
 Automatic merge failed; fix conflicts and then commit the result.
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> 
-</pre>
+@Iv3 Practica_GIT % 
+```
 
 ### 20) Si hay conflictos, deberemos resolverlos quedándonos con el contenido de la rama “styled”.
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git status
+```
+@Iv3 Practica_GIT % git status
 On branch htmlify
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
@@ -351,23 +351,23 @@ Changes not staged for commit:
 	modified:   git-nuestro.md
 
 no changes added to commit (use "git add" and/or "git commit -a")
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git add *md
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git status
+@Iv3 Practica_GIT % git add *md
+@Iv3 Practica_GIT % git status
 On branch htmlify
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
 	modified:   git-nuestro.md
 
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git commit -m "gitnuestro.md modified htmlify"
+@Iv3 Practica_GIT % git commit -m "gitnuestro.md modified htmlify"
 [htmlify 3859a3d] gitnuestro.md modified htmlify
  1 file changed, 10 insertions(+), 12 deletions(-)
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git checkout styled
+@Iv3 Practica_GIT % git checkout styled
 Switched to branch 'styled'
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git merge htmlify
+@Iv3 Practica_GIT % git merge htmlify
 Auto-merging git-nuestro.md
 CONFLICT (content): Merge conflict in git-nuestro.md
 Automatic merge failed; fix conflicts and then commit the result.
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git status
+@Iv3 Practica_GIT % git status
 On branch styled
 You have unmerged paths.
   (fix conflicts and run "git commit")
@@ -378,8 +378,8 @@ Unmerged paths:
 	both modified:   git-nuestro.md
 
 no changes added to commit (use "git add" and/or "git commit -a")
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git add *md
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git status
+@Iv3 Practica_GIT % git add *md
+@Iv3 Practica_GIT % git status
 On branch styled
 All conflicts fixed but you are still merging.
   (use "git commit" to conclude merge)
@@ -387,9 +387,9 @@ All conflicts fixed but you are still merging.
 Changes to be committed:
 	modified:   git-nuestro.md
 
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git commit
+@Iv3 Practica_GIT % git commit
 [styled 6b9a7c3] Merge branch 'htmlify' into styled
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git log
+@Iv3 Practica_GIT % git log
 commit 6b9a7c349ecdf7c4b5a27ecf284e90d60fbc2025 (HEAD -> styled)
 Merge: 02702cd 3859a3d
 Author: Iv3tt3 <reach.iv3tt3@gmail.com>
@@ -414,28 +414,28 @@ Author: Iv3tt3 <reach.iv3tt3@gmail.com>
 Date:   Sun Dec 3 19:55:05 2023 +0000
 
     Initial commit git-nuestro.md
-</pre>
+```
 
 ### 21) Desde “main”, hacer un merge con “styled”
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git checkout main
+```
+@Iv3 Practica_GIT % git checkout main
 Switched to branch 'main'
 Your branch is based on 'origin/main', but the upstream is gone.
   (use "git branch --unset-upstream" to fixup)
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git merge styled
+@Iv3 Practica_GIT % git merge styled
 Updating d9fadac..6b9a7c3
 Fast-forward
  git-nuestro.md | 22 ++++++++++------------
  1 file changed, 10 insertions(+), 12 deletions(-)
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> 
-</pre>
+@Iv3 Practica_GIT % 
+```
 
 ### 22) Crear una rama “title” y cambiarse a esa rama
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git branch title
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git checkout title
+```
+@Iv3 Practica_GIT % git branch title
+@Iv3 Practica_GIT % git checkout title
 Switched to branch 'title'
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git log
+@Iv3 Practica_GIT % git log
 commit 6b9a7c349ecdf7c4b5a27ecf284e90d60fbc2025 (HEAD -> title, styled, main)
 Merge: 02702cd 3859a3d
 Author: Iv3tt3 <reach.iv3tt3@gmail.com>
@@ -460,12 +460,12 @@ Author: Iv3tt3 <reach.iv3tt3@gmail.com>
 Date:   Sun Dec 3 19:55:05 2023 +0000
 
     Initial commit git-nuestro.md
-</pre>
+```
 
 ### 23) Añadir un título (a tu gusto) al archivo git-nuestro.md y hacer un commit.
 
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git status
+```
+@Iv3 Practica_GIT % git status
 On branch title
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
@@ -473,21 +473,21 @@ Changes not staged for commit:
 	modified:   git-nuestro.md
 
 no changes added to commit (use "git add" and/or "git commit -a")
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git add *md
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git commit -m "Title gitnuestro commit"
+@Iv3 Practica_GIT % git add *md
+@Iv3 Practica_GIT % git commit -m "Title gitnuestro commit"
 [title 8ea92e2] Title gitnuestro commit
  1 file changed, 2 insertions(+)
-</pre>
+```
 
 ### 24) Volver a la rama main
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git checkout main 
+```
+@Iv3 Practica_GIT % git checkout main 
 Switched to branch 'main'
-</pre>
+```
 
 ### 25) Dibujar el diagrama
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git log --graph
+```
+@Iv3 Practica_GIT % git log --graph
 *   commit 6b9a7c349ecdf7c4b5a27ecf284e90d60fbc2025 (HEAD -> main, styled)
 |\  Merge: 02702cd 3859a3d
 | | Author: Iv3tt3 <reach.iv3tt3@gmail.com>
@@ -513,43 +513,43 @@ Switched to branch 'main'
   
 :
 
-</pre>
+```
 
 ### 26) Hacer un merge “no fast-forward” de “title” en “main” (main absorbe a title)
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git merge --no-ff title
+```
+@Iv3 Practica_GIT % git merge --no-ff title
 Merge made by the 'ort' strategy.
  git-nuestro.md | 2 ++
  1 file changed, 2 insertions(+)
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> 
-</pre>
+@Iv3 Practica_GIT % 
+```
 
 ### 27) Deshacer el merge (sin perder los cambios del working copy)
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git reset HEAD~1 
+```
+@Iv3 Practica_GIT % git reset HEAD~1 
 Unstaged changes after reset:
 M	git-nuestro.md
-</pre>
+```
 
 ### 28) Descartar los cambios
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git restore *md
+```
+@Iv3 Practica_GIT % git restore *md
 
-</pre>
+```
 
 ### 29) Eliminar la rama “title”
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git branch -d title
+```
+@Iv3 Practica_GIT % git branch -d title
 error: The branch 'title' is not fully merged.
 If you are sure you want to delete it, run 'git branch -D title'.
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git branch -D title
+@Iv3 Practica_GIT % git branch -D title
 Deleted branch title (was 8ea92e2).
 
-</pre>
+```
 
 ### 30) Rehacer el merge que hemos deshecho
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git reflog
+```
+@Iv3 Practica_GIT % git reflog
 6b9a7c3 (HEAD -> main, styled) HEAD@{0}: reset: moving to HEAD~1
 c543f7e HEAD@{1}: merge title: Merge made by the 'ort' strategy.
 6b9a7c3 (HEAD -> main, styled) HEAD@{2}: checkout: moving from title to main
@@ -567,37 +567,37 @@ d9fadac HEAD@{13}: reset: moving to HEAD~1
 02702cd HEAD@{14}: commit: gitnnuestro.md modified styled
 d9fadac HEAD@{15}: checkout: moving from main to styled
 d9fadac HEAD@{16}: commit (initial): Initial commit git-nuestro.md
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git reset --hard 8ea92e2
+@Iv3 Practica_GIT % git reset --hard 8ea92e2
 HEAD is now at 8ea92e2 Title gitnuestro commit
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> 
-</pre>
+@Iv3 Practica_GIT % 
+```
 
 ### 31) Volver a main y eliminar el resto de ramas
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git branch -d styled    
+```
+@Iv3 Practica_GIT % git branch -d styled    
 Deleted branch styled (was 6b9a7c3).
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git branch -d htmlify
+@Iv3 Practica_GIT % git branch -d htmlify
 Deleted branch htmlify (was 3859a3d).
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> 
-</pre>
+@Iv3 Practica_GIT % 
+```
 
 ### 32) Volver al commit inicial cuando se creó el poema
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git reset --hard d9fadac
+```
+@Iv3 Practica_GIT % git reset --hard d9fadac
 HEAD is now at d9fadac Initial commit git-nuestro.md
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git log
+@Iv3 Practica_GIT % git log
 commit d9fadacc6bde9dee7653a33d38c66f7cb9d0e9cf (HEAD -> main)
 Author: Iv3tt3 <reach.iv3tt3@gmail.com>
 Date:   Sun Dec 3 19:55:05 2023 +0000
 
     Initial commit git-nuestro.md
-</pre>
+```
 
 ### 33) Volver al estado final, cuando pusimos título al poema
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git reset --hard 8ea92e2
+```
+@Iv3 Practica_GIT % git reset --hard 8ea92e2
 HEAD is now at 8ea92e2 Title gitnuestro commit
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git log
+@Iv3 Practica_GIT % git log
 commit 8ea92e2be237563dcf2fb21bd688d369112e7f24 (HEAD -> main)
 Author: Iv3tt3 <reach.iv3tt3@gmail.com>
 Date:   Sun Dec 3 20:29:22 2023 +0000
@@ -628,23 +628,23 @@ Author: Iv3tt3 <reach.iv3tt3@gmail.com>
 Date:   Sun Dec 3 19:55:05 2023 +0000
 
     Initial commit git-nuestro.md
-</pre>
+```
 
 ### 34) Crear los siguientes tags:
 inicial: en el primer commit
 styled: modificación del paso 10 
 htmlify: modificación del paso 17-18 
 title: modificación del paso 30
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git tag inicial d9fadac
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git tag styled 02702cd
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git tag htmlify 3859a3d                 
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git tag title 8ea92e2
-</pre>
+```
+@Iv3 Practica_GIT % git tag inicial d9fadac
+@Iv3 Practica_GIT % git tag styled 02702cd
+@Iv3 Practica_GIT % git tag htmlify 3859a3d                 
+@Iv3 Practica_GIT % git tag title 8ea92e2
+```
 
 ### 35) Ir al tag htmlify
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git checkout htmlify
+```
+@Iv3 Practica_GIT % git checkout htmlify
 Note: switching to 'htmlify'.
 
 You are in 'detached HEAD' state. You can look around, make experimental
@@ -663,20 +663,20 @@ Or undo this operation with:
 Turn off this advice by setting config variable advice.detachedHead to false
 
 HEAD is now at 3859a3d gitnuestro.md modified htmlify
-</pre>
+```
 
 ### 36) Vuelve a la rama main
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git checkout main
+```
+@Iv3 Practica_GIT % git checkout main
 Previous HEAD position was 3859a3d gitnuestro.md modified htmlify
 Switched to branch 'main'
 
-</pre>
+```
 
 ### 37) Sube a GitHub todas las ramas y todos los tags
 
-<pre>
-<span style="color:#74C2FF">@Iv3 Practica_GIT % </span> git push --set-upstream origin main
+```
+@Iv3 Practica_GIT % git push --set-upstream origin main
 Enumerating objects: 15, done.
 Counting objects: 100% (15/15), done.
 Delta compression using up to 12 threads
@@ -688,4 +688,4 @@ To github.com:Iv3tt3/Practica_GIT.git
  * [new branch]      main -> main
 branch 'main' set up to track 'origin/main'.
 
-</pre>
+```
